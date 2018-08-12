@@ -1,0 +1,81 @@
+html {
+	box-sizing: border-box;
+	background:#ffc600;
+	font-family:'helvetica neue';
+	font-size: 20px;
+	font-weight: 200;
+}
+body {
+	margin: 0;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+.panels {
+	min-height:100vh;
+	overflow: hidden;
+	display: flex;
+	padding: 3rem;
+}
+.panel {
+	background:#6B0F9C;
+	box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+	color:white;
+	text-align: center;
+	align-items:center;
+	/* Safari transitionend event.propertyName === flex */
+	/* Chrome + FF transitionend event.propertyName === flex-grow */
+	transition:
+		font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+		flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+		background 0.2s;
+	font-size: 20px;
+	background-size:cover;
+	background-position:center;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.panel1 { background-image:url(https://images1.houstonpress.com/imager/u/745xauto/10248943/velvettaco10979_again.jpg); }
+.panel2 { background-image:url(http://1.bp.blogspot.com/-8wYUCT-140c/VSMmdvNSb_I/AAAAAAAAAxI/zk-Mm-YCvzU/s1600/Krystle%2BDarling_Velvet%2BTaco_Dallas_3.jpg); }
+.panel3 { background-image:url(https://media.nbclosangeles.com/images/653*367/chicastacostacolandia1.jpg); }
+.panel4 { background-image:url(https://hips.hearstapps.com/del.h-cdn.co/assets/16/30/2048x1365/gallery-1469636684-grilled-chicken-taco-avocado-cilantro-mayol1.jpg?resize=768:*); }
+.panel5 { background-image:url(https://www.willcookforsmiles.com/wp-content/uploads/2016/08/Sriracha-Chicken-Tacos-2.jpg); }
+.panel > * {
+	margin:0;
+	width: 100%;
+	transition:transform 0.5s;
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.panel > *:first-child {
+	transform: translateY(-100%);
+}
+.panel > *:last-child {
+	transform: translateY(100%);
+}
+.panel.open-active > *:first-child,
+.panel.open-active > *:last-child {
+	transform: translateY(0);
+}
+.panel p {
+	text-transform: uppercase;
+	font-family: 'Bitter', cursive;
+	text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+	font-size: 2em;
+}
+.panel p:nth-child(2) {
+	font-size: 4em;
+}
+.panel.open {
+	flex: 5;
+	font-size: 40px;
+}
+.cta {
+	color:white;
+	text-decoration: none;
+}
