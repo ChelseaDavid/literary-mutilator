@@ -63,17 +63,25 @@
 					it spins. Let’s do a beef and a chicken, and one with both. Josh’s taco shack is the best taco shack. 50 cent
 					tacos! I’ll take 30. Let’s do a beef and a chicken, and one with both.
 				</p>
-				<h2>Find the special Word</h2>
+				<h2>Find the special Word(s)</h2>
 				<p>
 					How bout a gosh darn quesadilla? It’s taco Tuesday Monday. Flour or corn tortillas? Fish tacos with
 					cabbage slaw and a side of chips and guac. Tacos, again? This will be 5 times this week and it’s only
 					Tuesday. Tacos dorados called flautas, or <span onmouseover="highlightOn(this)" onmouseout="highlightOff(this)">taquitos</span>,
 					for which the tortillas are filled with pre-cooked shredded chicken, beef or barbacoa, rolled into an
-					elongated cylinder and deep-fried until crisp. If you were a taco, would you eat yourself? Burritos are
+					elongated cylinder and deep-fried until crisp. If you were a <span id="jumble" onmouseover="replaceNewWord()" onmouseout="replaceNewWordBack()"> taco</span>, would you eat yourself? Burritos are
 					very tasty. Josh’s taco shack is the best taco shack. It’s taco Tuesday Monday.
 				</p>
-			</div>
-		</div>
+				<div class="container">
+
+				<h2>Put Mr. Taco in his place</h2>
+
+				<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<br>
+				<img id="drag1" src="images/mrTaco.png" draggable="true" ondragstart="drag(event)" width="211" height="239">
+								</div>
+							</div>
+						</div>
 		<script src="script.js"></script>
 	</body>
 </html>

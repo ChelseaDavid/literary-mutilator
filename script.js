@@ -41,3 +41,30 @@ function replaceWordBack(){
 	let x = y.replace(/banana/gi, 'taco');
 	document.getElementById('third').innerHTML = x;
 }
+
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));
+}
+
+
+function replaceNewWord(){
+	let y = document.getElementById('jumble').innerHTML;
+	let x = y.replace(/taco/gi, 'banana');
+	document.getElementById('jumble').innerHTML = x;
+}
+
+function replaceNewWordBack(){
+	let y = document.getElementById('jumble').innerHTML;
+	let x = y.replace(/banana/gi, 'taco');
+	document.getElementById('jumble').innerHTML = x;
+}
